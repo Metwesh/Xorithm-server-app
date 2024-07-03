@@ -1,0 +1,12 @@
+/* Styling for server status */
+.server-status-up {
+  color: #28a745;
+}
+
+.server-status-degraded {
+  color: #ffc107;
+}
+
+.server-status-down {
+  color: #dc3545;
+}
