@@ -1,13 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
-import { AuthContext } from "../authContext";
 import ErrorWrapper from "@/components/errorWrapper";
 import Link from "next/link";
 
 export default function Register() {
   const router = useRouter();
-  const { setIsLoggedIn } = useContext(AuthContext);
 
   const [formValues, setFormValues] = useState({
     name: "",
@@ -80,7 +78,7 @@ export default function Register() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validateForm()) return;
-    setIsLoggedIn(true); // Set isLoggedIn to true
+    sessionStorage.setItem("token", "your_token_here");
     router.push("/"); // Redirect to home page
   };
   return (
