@@ -67,8 +67,6 @@ export default function Register() {
       isValid = false;
     }
 
-    // Update formErrors state here if using a state management system
-    // e.g., this.setState({ formErrors });
     setFormErrors({ ...errorObject });
 
     // Return both the validation status and the errors object
